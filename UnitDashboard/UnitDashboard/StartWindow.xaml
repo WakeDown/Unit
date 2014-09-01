@@ -6,5 +6,5 @@
         Title="StartWindow" Height="300" Width="300">
     <Frame
         NavigationUIVisibility="Hidden"
-        Source="TestWindow.xaml"/>
+        Source="CreatePage.xaml"/>
 </Window>

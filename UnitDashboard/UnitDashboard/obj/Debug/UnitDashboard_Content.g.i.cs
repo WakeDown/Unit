@@ -8,7 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("htmlexchangerates.html")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("htmlweather.html")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("dboptions.sdf")]
 
 
