@@ -20,17 +20,8 @@ namespace UnitDashboard
             data[2] = CBox_0.SelectedItem.ToString();
             data[3] = CBox_1.SelectedItem.ToString();
 
-            SqlCeConnection connDBPageOptions = new SqlCeConnection(@"Data Source=C:\\GitHub\\UnitDashboard\\UnitDashboard\\Data\\DBPageOptions.mdf");
-            try
-            {
-                connDBPageOptions.Open();
-            }
-            catch (SqlCeException)
-            {
-                Console.WriteLine("Ошибка подключения:{0}", se.Message);
-            }
-            Console.WriteLine("Соедение успешно произведено");
-
+            SqlCeConnection connDBPageOptions = new SqlCeConnection("Data Source = Data\\DBPageOptions.mdf");
+            connDBPageOptions.Open();
         }
     }
 }
