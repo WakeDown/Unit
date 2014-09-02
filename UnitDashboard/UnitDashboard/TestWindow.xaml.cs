@@ -21,8 +21,8 @@ namespace UnitDashboard
         {
             InitializeComponent();
 
-            FBlock_6.Source = new Uri("ServicePage/WeatherPage.xaml", UriKind.Relative);
-            FBlock_7.Source = new Uri("ServicePage/ExchangeRatesPage.xaml", UriKind.Relative);
+            FBlock_6.Source = new Uri("Service/WeatherPage.xaml", UriKind.Relative);
+            FBlock_7.Source = new Uri("Service/ExchangeRatesPage.xaml", UriKind.Relative);
 
             string text = "Бегууууууууууууууууууууущая строка";
             int length = text.Length;

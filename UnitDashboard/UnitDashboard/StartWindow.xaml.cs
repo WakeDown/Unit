@@ -21,6 +21,7 @@ namespace UnitDashboard
             InitializeComponent();
 
             WindowSize.WindowState = WindowState.Maximized;
+            FBlock.Source = new Uri("CreatePage.xaml", UriKind.Relative);
         }
     }
 }

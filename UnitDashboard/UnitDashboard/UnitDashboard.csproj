@@ -13,6 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>опубликовать\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -25,7 +26,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -81,10 +81,10 @@
     <Compile Include="CreatePage.xaml.cs">
       <DependentUpon>CreatePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DBOptionsDataSet.Designer.cs">
+    <Compile Include="Data\DBPageOptionsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBOptionsDataSet.xsd</DependentUpon>
+      <DependentUpon>DBPageOptionsDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="ExampleCompleteCreatePage.xaml.cs">
       <DependentUpon>ExampleCompleteCreatePage.xaml</DependentUpon>
@@ -99,12 +99,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Service\ExchangeRatesService.cs" />
-    <Compile Include="Service\WeatherService.cs" />
-    <Compile Include="ServicePage\ExchangeRatesPage.xaml.cs">
+    <Compile Include="Service\ExchangeRatesPage.xaml.cs">
       <DependentUpon>ExchangeRatesPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ServicePage\WeatherPage.xaml.cs">
+    <Compile Include="Service\WeatherPage.xaml.cs">
       <DependentUpon>WeatherPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="StartWindow.xaml.cs">
@@ -156,11 +154,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ServicePage\ExchangeRatesPage.xaml">
+    <Page Include="Service\ExchangeRatesPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ServicePage\WeatherPage.xaml">
+    <Page Include="Service\WeatherPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -227,16 +225,16 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="DBOptionsDataSet.xsc">
-      <DependentUpon>DBOptionsDataSet.xsd</DependentUpon>
+    <None Include="Data\DBPageOptionsDataSet.xsc">
+      <DependentUpon>DBPageOptionsDataSet.xsd</DependentUpon>
     </None>
-    <None Include="DBOptionsDataSet.xsd">
+    <None Include="Data\DBPageOptionsDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DBOptionsDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>DBPageOptionsDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="DBOptionsDataSet.xss">
-      <DependentUpon>DBOptionsDataSet.xsd</DependentUpon>
+    <None Include="Data\DBPageOptionsDataSet.xss">
+      <DependentUpon>DBPageOptionsDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\System.Xml.XmlNode.datasource" />
     <None Include="Properties\Settings.settings">
@@ -290,11 +288,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DBOptions.sdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.5 %28x86 и x64%29</ProductName>
@@ -315,6 +308,15 @@
       <ProductName>SQL Server Compact 4.0 SP1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\DBPageOptions.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\DBPageOptions_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>DBPageOptions.mdf</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

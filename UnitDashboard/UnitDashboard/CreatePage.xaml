@@ -149,7 +149,7 @@
                     </TextBlock>
                 </Viewbox>
                 <TextBox
-                    Name="TBlock_0"
+                    Name="TBox_0"
                     Grid.Row="0"
                     Grid.Column="2">
                     Введите строку
@@ -164,7 +164,7 @@
                     </TextBlock>
                 </Viewbox>
                 <TextBox
-                    Name="TBlock_1"
+                    Name="TBox_1"
                     Grid.Row="1"
                     Grid.Column="1"
                     Grid.ColumnSpan="2">
