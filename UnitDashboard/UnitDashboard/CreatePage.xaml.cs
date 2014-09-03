@@ -42,6 +42,8 @@ namespace UnitDashboard
                 dbPageOptions.Insert(TBox_1.Text, "Request");
                 dbPageOptions.Insert(CBox_0.SelectedItem.ToString(), "Service");
                 dbPageOptions.Insert(CBox_1.SelectedItem.ToString(), "Service");
+
+                dbPageOptions.SaveChanges();
             }
         }
     }
