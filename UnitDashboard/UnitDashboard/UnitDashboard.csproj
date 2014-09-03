@@ -81,7 +81,7 @@
     <Compile Include="CreatePage.xaml.cs">
       <DependentUpon>CreatePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Data\DBPageOptionsDataSet.Designer.cs">
+    <Compile Include="App_Data\DBPageOptionsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DBPageOptionsDataSet.xsd</DependentUpon>
@@ -225,15 +225,15 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Data\DBPageOptionsDataSet.xsc">
+    <None Include="App_Data\DBPageOptionsDataSet.xsc">
       <DependentUpon>DBPageOptionsDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Data\DBPageOptionsDataSet.xsd">
+    <None Include="App_Data\DBPageOptionsDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DBPageOptionsDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Data\DBPageOptionsDataSet.xss">
+    <None Include="App_Data\DBPageOptionsDataSet.xss">
       <DependentUpon>DBPageOptionsDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\System.Xml.XmlNode.datasource" />
@@ -310,10 +310,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Data\DBPageOptions.mdf">
+    <Content Include="App_Data\DBPageOptions.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\DBPageOptions_log.ldf">
+    <Content Include="App_Data\DBPageOptions_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>DBPageOptions.mdf</DependentUpon>
     </Content>

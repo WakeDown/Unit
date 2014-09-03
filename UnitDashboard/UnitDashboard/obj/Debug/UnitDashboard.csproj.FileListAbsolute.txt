@@ -117,10 +117,10 @@ C:\GitHub\UnitDashboard\UnitDashboard\obj\Debug\UnitDashboard_MarkupCompile.cach
 C:\GitHub\UnitDashboard\UnitDashboard\obj\Debug\UnitDashboard.g.resources
 C:\GitHub\UnitDashboard\UnitDashboard\obj\Debug\UnitDashboard.Properties.Resources.resources
 C:\GitHub\UnitDashboard\UnitDashboard\obj\Debug\UnitDashboard.csproj.GenerateResource.Cache
-C:\GitHub\UnitDashboard\UnitDashboard\bin\Debug\Data\DBPageOptions.mdf
-C:\GitHub\UnitDashboard\UnitDashboard\bin\Debug\Data\DBPageOptions_log.ldf
 C:\GitHub\UnitDashboard\UnitDashboard\obj\Debug\Service\ExchangeRatesPage.baml
 C:\GitHub\UnitDashboard\UnitDashboard\obj\Debug\Service\WeatherPage.baml
 C:\GitHub\UnitDashboard\UnitDashboard\obj\Debug\Service\ExchangeRatesPage.g.cs
 C:\GitHub\UnitDashboard\UnitDashboard\obj\Debug\Service\WeatherPage.g.cs
 C:\GitHub\UnitDashboard\UnitDashboard\obj\Debug\UnitDashboard_Content.g.cs
+C:\GitHub\UnitDashboard\UnitDashboard\bin\Debug\App_Data\DBPageOptions.mdf
+C:\GitHub\UnitDashboard\UnitDashboard\bin\Debug\App_Data\DBPageOptions_log.ldf

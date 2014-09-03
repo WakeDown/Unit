@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("data/dbpageoptions.mdf")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("data/dbpageoptions_log.ldf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("app_data/dbpageoptions.mdf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("app_data/dbpageoptions_log.ldf")]
 
 

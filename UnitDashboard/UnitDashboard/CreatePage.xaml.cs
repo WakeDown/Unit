@@ -20,7 +20,7 @@ namespace UnitDashboard
             data[2] = CBox_0.SelectedItem.ToString();
             data[3] = CBox_1.SelectedItem.ToString();
 
-            SqlCeConnection connDBPageOptions = new SqlCeConnection("Data Source = Data\\DBPageOptions.mdf");
+            SqlCeConnection connDBPageOptions = new SqlCeConnection(@"Data Source=C:\GitHub\UnitDashboard\UnitDashboard\App_Data\DBPageOptions.mdf");
             connDBPageOptions.Open();
         }
     }
