@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBPageOptionsModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DBPageOptionsEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="BlockOptions" EntityType="DBPageOptionsModel.BlockOptions" />
+    <FunctionImport Name="Delete" />
+    <FunctionImport Name="DeleteId">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteValue">
+      <Parameter Name="value" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Insert">
+      <Parameter Name="content" Mode="In" Type="String" />
+      <Parameter Name="type" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Len">
+      <Parameter Name="Len" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Procedure" ReturnType="Collection(DBPageOptionsModel.Procedure_Result)">
+      <Parameter Name="param1" Mode="In" Type="Int32" />
+      <Parameter Name="param2" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Select" ReturnType="Collection(DBPageOptionsModel.Select_Result)" />
+    <FunctionImport Name="SelectId" ReturnType="Collection(DBPageOptionsModel.SelectId_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SelectValue" ReturnType="Collection(DBPageOptionsModel.SelectValue_Result)">
+      <Parameter Name="value" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="BlockOptions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ContentBlock" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="TypeBlock" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <ComplexType Name="Procedure_Result">
+    <Property Type="Int32" Name="Column1" Nullable="true" />
+    <Property Type="Int32" Name="Column2" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Select_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="ContentBlock" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="TypeBlock" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="SelectId_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="ContentBlock" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="TypeBlock" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="SelectValue_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="ContentBlock" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="TypeBlock" Nullable="true" MaxLength="20" />
+  </ComplexType>
+</Schema>

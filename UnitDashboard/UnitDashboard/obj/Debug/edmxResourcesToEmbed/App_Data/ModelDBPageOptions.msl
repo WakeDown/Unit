@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище DBPageOptionsModelContainer" CdmEntityContainer="DBPageOptionsEntities">
+    <EntitySetMapping Name="BlocksOptions">
+      <EntityTypeMapping TypeName="DBPageOptionsModel.BlocksOptions">
+        <MappingFragment StoreEntitySet="BlocksOptions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ContentBlock" ColumnName="ContentBlock" />
+          <ScalarProperty Name="TypeBlock" ColumnName="TypeBlock" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Delete" FunctionName="Хранилище DBPageOptionsModel.Delete" />
+    <FunctionImportMapping FunctionImportName="DeleteId" FunctionName="Хранилище DBPageOptionsModel.DeleteId" />
+    <FunctionImportMapping FunctionImportName="DeleteValue" FunctionName="Хранилище DBPageOptionsModel.DeleteValue" />
+    <FunctionImportMapping FunctionImportName="Insert" FunctionName="Хранилище DBPageOptionsModel.Insert" />
+    <FunctionImportMapping FunctionImportName="Select" FunctionName="Хранилище DBPageOptionsModel.Select">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBPageOptionsModel.Select_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ContentBlock" ColumnName="ContentBlock" />
+          <ScalarProperty Name="TypeBlock" ColumnName="TypeBlock" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectId" FunctionName="Хранилище DBPageOptionsModel.SelectId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBPageOptionsModel.SelectId_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ContentBlock" ColumnName="ContentBlock" />
+          <ScalarProperty Name="TypeBlock" ColumnName="TypeBlock" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectValue" FunctionName="Хранилище DBPageOptionsModel.SelectValue">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBPageOptionsModel.SelectValue_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ContentBlock" ColumnName="ContentBlock" />
+          <ScalarProperty Name="TypeBlock" ColumnName="TypeBlock" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

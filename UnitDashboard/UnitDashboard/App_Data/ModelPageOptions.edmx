@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище DBPageOptionsModel" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="Хранилище DBPageOptionsModelContainer">
+          <EntitySet Name="BlockOptions" EntityType="Хранилище DBPageOptionsModel.BlockOptions" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="BlockOptions">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ContentBlock" Type="nvarchar" MaxLength="100" />
+          <Property Name="TypeBlock" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <Function Name="Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="DeleteId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="DeleteValue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="value" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="content" Type="nvarchar" Mode="In" />
+          <Parameter Name="type" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="Len" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Len" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="Procedure" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="param1" Type="int" Mode="In" />
+          <Parameter Name="param2" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Select" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SelectId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SelectValue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="value" Type="int" Mode="In" />
+        </Function>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DBPageOptionsModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DBPageOptionsEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="BlockOptions" EntityType="DBPageOptionsModel.BlockOptions" />
+          <FunctionImport Name="Delete" />
+          <FunctionImport Name="DeleteId">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="DeleteValue">
+            <Parameter Name="value" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Insert">
+            <Parameter Name="content" Mode="In" Type="String" />
+            <Parameter Name="type" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Len">
+            <Parameter Name="Len" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Procedure" ReturnType="Collection(DBPageOptionsModel.Procedure_Result)">
+            <Parameter Name="param1" Mode="In" Type="Int32" />
+            <Parameter Name="param2" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Select" ReturnType="Collection(DBPageOptionsModel.Select_Result)" />
+          <FunctionImport Name="SelectId" ReturnType="Collection(DBPageOptionsModel.SelectId_Result)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SelectValue" ReturnType="Collection(DBPageOptionsModel.SelectValue_Result)">
+            <Parameter Name="value" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="BlockOptions">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ContentBlock" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="TypeBlock" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <ComplexType Name="Procedure_Result">
+          <Property Type="Int32" Name="Column1" Nullable="true" />
+          <Property Type="Int32" Name="Column2" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="Select_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="ContentBlock" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="TypeBlock" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="SelectId_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="ContentBlock" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="TypeBlock" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="SelectValue_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="ContentBlock" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="TypeBlock" Nullable="true" MaxLength="20" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище DBPageOptionsModelContainer" CdmEntityContainer="DBPageOptionsEntities">
+          <EntitySetMapping Name="BlockOptions">
+            <EntityTypeMapping TypeName="DBPageOptionsModel.BlockOptions">
+              <MappingFragment StoreEntitySet="BlockOptions">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ContentBlock" ColumnName="ContentBlock" />
+                <ScalarProperty Name="TypeBlock" ColumnName="TypeBlock" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="Delete" FunctionName="Хранилище DBPageOptionsModel.Delete" />
+          <FunctionImportMapping FunctionImportName="DeleteId" FunctionName="Хранилище DBPageOptionsModel.DeleteId" />
+          <FunctionImportMapping FunctionImportName="DeleteValue" FunctionName="Хранилище DBPageOptionsModel.DeleteValue" />
+          <FunctionImportMapping FunctionImportName="Insert" FunctionName="Хранилище DBPageOptionsModel.Insert" />
+          <FunctionImportMapping FunctionImportName="Len" FunctionName="Хранилище DBPageOptionsModel.Len" />
+          <FunctionImportMapping FunctionImportName="Procedure" FunctionName="Хранилище DBPageOptionsModel.Procedure">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBPageOptionsModel.Procedure_Result">
+                <ScalarProperty Name="Column1" ColumnName="Column1" />
+                <ScalarProperty Name="Column2" ColumnName="Column2" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Select" FunctionName="Хранилище DBPageOptionsModel.Select">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBPageOptionsModel.Select_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ContentBlock" ColumnName="ContentBlock" />
+                <ScalarProperty Name="TypeBlock" ColumnName="TypeBlock" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SelectId" FunctionName="Хранилище DBPageOptionsModel.SelectId">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBPageOptionsModel.SelectId_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ContentBlock" ColumnName="ContentBlock" />
+                <ScalarProperty Name="TypeBlock" ColumnName="TypeBlock" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SelectValue" FunctionName="Хранилище DBPageOptionsModel.SelectValue">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBPageOptionsModel.SelectValue_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ContentBlock" ColumnName="ContentBlock" />
+                <ScalarProperty Name="TypeBlock" ColumnName="TypeBlock" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
